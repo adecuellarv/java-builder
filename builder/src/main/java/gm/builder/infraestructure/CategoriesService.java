@@ -1,13 +1,17 @@
 package gm.builder.infraestructure;
 
-import gm.builder.domain.entities.Categories;
-import gm.builder.domain.interfaces.ICategoriesRepository;
-
+import gm.builder.domain.entities.categories;
+import gm.builder.domain.interfaces.CategoriesRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import java.util.List;
 
-public class CategoriesService implements ICategoriesRepository {
+@Service
+public class CategoriesService implements ICategoriesService {
 
-    private CategoriesReposity categoriesReposity;
+    @Autowired
+    private CategoriesRepository categoriesRepository;
 
-    public List<Categories> getCategories() { return categoriesReposity.findAll(); }
+    @Override
+    public List<categories> getCategories() { return categoriesRepository.findAll(); }
 }

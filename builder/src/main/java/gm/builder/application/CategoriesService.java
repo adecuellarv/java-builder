@@ -1,11 +1,11 @@
 package gm.builder.application;
 
-import gm.builder.domain.interfaces.ICategoriesRepository;
+import gm.builder.infraestructure.ICategoriesService;
 
 public class CategoriesService {
-    private final ICategoriesRepository iCategoriesRepository;
+    private final ICategoriesService iCategoriesRepository;
 
-    public CategoriesService(ICategoriesRepository iCategoriesRepository) {
+    public CategoriesService(ICategoriesService iCategoriesRepository) {
         this.iCategoriesRepository = iCategoriesRepository;
     }
 }

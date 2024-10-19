@@ -1,7 +1,7 @@
 package gm.builder.web;
 
-import gm.builder.domain.entities.Categories;
-import gm.builder.domain.interfaces.ICategoriesRepository;
+import gm.builder.domain.entities.categories;
+import gm.builder.infraestructure.ICategoriesService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +19,12 @@ public class CategoriesController {
     private static final Logger logger = LoggerFactory.getLogger(CategoriesController.class);
 
     @Autowired
-    private ICategoriesRepository iCategoriesRepository;
+    private ICategoriesService iCategoriesService;
 
     @GetMapping("/categories")
-    public List<Categories> getCategories(){
-        var categories = iCategoriesRepository.getCategories();
-        return (List<Categories>) categories;
+    public List<categories> obtenerCat(){
+        var categories = iCategoriesService.getCategories();
+        categories.forEach((category -> logger.info(category.toString())));
+        return categories;
     }
 }

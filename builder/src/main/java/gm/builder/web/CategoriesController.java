@@ -1,7 +1,7 @@
 package gm.builder.web;
 
 import gm.builder.domain.entities.categories;
-import gm.builder.infraestructure.ICategoriesService;
+import gm.builder.infraestructure.categories.ICategoriesService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package gm.builder.infraestructure;
+package gm.builder.infraestructure.categories;
 import gm.builder.domain.entities.categories;
 
 import java.util.List;

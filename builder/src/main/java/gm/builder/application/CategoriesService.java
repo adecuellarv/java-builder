@@ -1,6 +1,6 @@
 package gm.builder.application;
 
-import gm.builder.infraestructure.ICategoriesService;
+import gm.builder.infraestructure.categories.ICategoriesService;
 
 public class CategoriesService {
     private final ICategoriesService iCategoriesRepository;
